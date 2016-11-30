@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.boss.recordservice">
+    <!--SHOULD BE INCLUDED IN MAIN PROJECT-->
+    <uses-permission android:name="android.permission.GET_TASKS" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--SHOULD BE INCLUDED IN MAIN PROJECT-->
+        <activity android:name=".service.ServiceDialog" android:label="" android:theme="@style/Theme.AppCompat.Dialog" />
         <service
             android:name=".service.RecordAutoStartService"
             android:enabled="true"
