@@ -3,6 +3,7 @@
     package="com.example.boss.recordservice">
     <!--SHOULD BE INCLUDED IN MAIN PROJECT-->
     <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:allowBackup="true"
@@ -18,7 +19,10 @@
             </intent-filter>
         </activity>
         <!--SHOULD BE INCLUDED IN MAIN PROJECT-->
-        <activity android:name=".service.ServiceDialog" android:label="" android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity
+            android:name=".service.ServiceDialog"
+            android:label=""
+            android:theme="@style/Theme.AppCompat.Dialog" />
         <service
             android:name=".service.RecordAutoStartService"
             android:enabled="true"
